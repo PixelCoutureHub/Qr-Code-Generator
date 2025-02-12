@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - QR Code Generator using Vanilla JavaScript</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>QRCodes | QR Code Generator</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&amp;display=swap'><link rel="stylesheet" href="./style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
-<!-- https://www.youtube.com/@CubicDeveloper -->
-<div class="user-input-section">
-  <section class="heading">
-    <div class="title">QRcodes</div>
-    <div class="sub-title">Generate QRCode for anything!</div>
-  </section>
-  <section class="user-input">
-    <input type="text" placeholder="Type something..." 
-    name="input_text" id="input_text" autocomplete="off">
-    <button class="button" type="submit">Generate 
-      <i class="fas fa-sync-alt fa-rotate rotate-on-hover"></i>
-    </button>
-    <div class="qr-code-container">
-      <div class="qr-code" style></div>
-    </div>
-  </section>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'></script><script  src="./script.js"></script>
-
+  <div class="container">
+    <header>
+      <h1>QR Code Generator</h1>
+      <p>Create custom QR codes instantly!</p>
+    </header>
+    <main>
+      <div class="input-section">
+        <input type="text" id="input_text" placeholder="Enter text or URL..." autocomplete="off">
+        <div class="color-picker">
+          <label for="foreground_color">Foreground:</label>
+          <input type="color" id="foreground_color" value="#000000">
+          <label for="background_color">Background:</label>
+          <input type="color" id="background_color" value="#ffffff">
+        </div>
+        <div class="size-picker">
+          <label for="qr_size">Size:</label>
+          <select id="qr_size">
+            <option value="180">Small</option>
+            <option value="250" selected>Medium</option>
+            <option value="350">Large</option>
+          </select>
+        </div>
+        <button id="generate_btn">Generate QR Code</button>
+      </div>
+      <div class="qr-code-container">
+        <div class="qr-code"></div>
+      </div>
+    </main>
+    <footer>
+      <p>Made with ❤️ by Asaad Siddiqui</p>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
