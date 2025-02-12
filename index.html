@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
+  <div class="background-animation"></div>
   <div class="container">
     <header>
       <h1>QR Code Generator</h1>
-      <p>Generate stylish QR codes instantly!</p>
+      <p>Create stylish QR codes instantly!</p>
     </header>
     <main>
       <div class="glass-card">
@@ -23,9 +24,9 @@
           <div class="options">
             <div class="color-picker">
               <label for="foreground_color">Foreground:</label>
-              <input type="color" id="foreground_color" value="#000000">
+              <input type="color" id="foreground_color" value="#ffffff">
               <label for="background_color">Background:</label>
-              <input type="color" id="background_color" value="#ffffff">
+              <input type="color" id="background_color" value="#000000">
             </div>
             <div class="size-picker">
               <label for="qr_size">Size:</label>
